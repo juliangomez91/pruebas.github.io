@@ -1,0 +1,56 @@
+body{
+ background-color: black;
+}
+h1{
+
+text-align: center;
+color: white;
+border: solid #0b8672 5px;
+margin-left: 200px;
+margin-right: 200px;
+
+}
+a{
+ color: black;
+ font-size: 20px;
+ text-decoration: none;
+}
+.menu{
+ display: flex;
+ flex-direction:column;
+flex-wrap: wrap;
+margin-top: 50px;
+ 
+}
+a:hover{
+  color:white;
+}
+
+.imagen{
+display: flex;
+justify-content: end;
+align-items: flex-start;
+height: 600px;
+margin: 80px;
+
+
+}
+#espec{
+ align-items: flex-start;
+ border-top-right-radius: 500px;
+ border-bottom-left-radius: 500px;
+ border: solid white 6px;
+}
+.todo{
+display: flex;
+justify-content: space-around;
+
+}
+.menu{
+    display: flex;
+background-color:#0b8672;
+flex-wrap: wrap;
+border: solid white 3px;
+border-radius: 10px 10px 10px 10px;
+
+}
