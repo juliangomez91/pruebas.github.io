@@ -2,56 +2,96 @@ body{
  background-color:black;
 }
 
+.titulo{
+ display: flex;
+}
+
+.foto{
+  height: 300px;
+  width: 300px;
+border-radius: 50px 0px 50px 0px;
+border:solid #feff53 ;
+margin-left: 50px;
+margin-top:25px ;
+}
+
 h1{
   display: flex;
   justify-content: center;
-  color:white;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:#feff53;
+  font-family:cursive;
   text-align:center;
   position: absolute;
-  top: 20px;
-  left: 680px;
-  border:solid white 5px;
+  top: 15px;
+  left: 550px;
+  border:solid #9d6913 5px;
+  font-size: 45px;
 }
+h2{
+  padding-left: 50px;
+  color:#f68207;
+  display: flex;
+  justify-content: space-evenly;
+font-size: 32px;
+  }
 .encabezado{
  display: flex;
  flex-direction: row;
  top: 30px;
 }
-#RECETAS, #FOTOS, #EVENTOS, #ENCASA, #SHOWROOM  {
+.links{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  }
+  #search-input{
+   border-radius: 10px;
+  width: 200px;
+  height:35px;
+  background-color: rgb(185, 195, 191);
+  border: solid white 3px;
+  }
+  #search-input::placeholder{
+   color: black;
+  }
+  #search-button{
+ background-color: #fc7d00;
+ width: 65px;
+ height: 35px;
+ border-radius:0 30px 0 30px ;
+  }
+  #search-button:hover{
+  cursor: pointer;
+  }
+a  {
   display: flex;
 font-size: 30px; 
-color: aliceblue;
-justify-content:center;
+font-family: cursive;
+color: #abcb42;
 padding-left: 70px;
-align-items: flex-start;
-}
-.links{
-display: flex;
-flex-direction: row;
-align-items: center;
-}
-h2{
-padding-left: 50px;
-color: white;
-}
-.foto{
-    height: 300px;
-    width: 300px;
- border-radius: 50px 0px 50px 0px;
- border:solid white ;
- margin-left: 50px;
- margin-top:25px ;
-}
 
-
+}
 .parrafo{
   color: white;
   display: flex;
   justify-content: center;
  text-align:justify;
  padding: 0px 50px 50px 50px;
+ font-size: 22px;
+ font-family:cursive;
 }
+
+.search-container{
+  justify-content: end;
+  order: 3;
+  margin-top: 35px;
+  margin-left: -250px;
+}
+
+
+
+
+
 .fotosPlatos{
  display: flex;
  width: 250px;
