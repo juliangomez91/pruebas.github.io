@@ -1,12 +1,17 @@
 body{
  background-color: black;
 }
+.titulo{
+ display: flex;
+ justify-content: space-evenly;
+}
 h1{
 text-align: center;
-color: white;
-border:solid 5px white;
+color: #feff53;
+border:solid 5px #9d6913;
 margin-left: 200px;
 margin-right: 200px;
+padding: 0 15px 0 15px;
 }
 
 .fotos{

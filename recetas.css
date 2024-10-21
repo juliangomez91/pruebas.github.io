@@ -1,13 +1,18 @@
 body{
  background-color: black;
 }
+.titulo{
+ display: flex;
+ justify-content: space-evenly;
+}
 h1{
 
 text-align: center;
-color: white;
-border: solid #0b8672 5px;
+color: #feff53;
+border: solid #9d6913 5px;
 margin-left: 200px;
 margin-right: 200px;
+padding: 0 10px 0 10px;
 
 }
 a{
@@ -39,7 +44,7 @@ margin: 80px;
  align-items: flex-start;
  border-top-right-radius: 500px;
  border-bottom-left-radius: 500px;
- border: solid white 6px;
+ border: solid #9d6913 6px;
 }
 .todo{
 display: flex;
@@ -48,9 +53,9 @@ justify-content: space-around;
 }
 .menu{
     display: flex;
-background-color:#0b8672;
+background-color:#9d6913;
 flex-wrap: wrap;
-border: solid white 3px;
+border: solid #feff53 3px;
 border-radius: 10px 10px 10px 10px;
 
 }
