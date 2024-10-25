@@ -8,6 +8,15 @@
 <body>
     <div class="titulo"> 
         <h1>EN CASA</h1>
-                         </div>
+                        
+        <p>Haz clic en la <span class="popup-word" onclick="showPopup()">palabra</span> para ver la ventana emergente.</p>
+
+        <div id="popup" class="popup">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <p>¡Hola! Esta es la ventana emergente.</p>
+        </div>
+    
+        <script src="script.js"></script>             
+                        
 </body>
 </html>

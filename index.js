@@ -40,3 +40,6 @@ function performSearch(query) {
         resultsDiv.textContent = 'No se encontraron resultados.';
     } 
   }
+
+
+
