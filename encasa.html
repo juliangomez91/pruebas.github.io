@@ -8,15 +8,28 @@
 <body>
     <div class="titulo"> 
         <h1>EN CASA</h1>
-                        
-        <p>Haz clic en la <span class="popup-word" onclick="showPopup()">palabra</span> para ver la ventana emergente.</p>
-
-        <div id="popup" class="popup">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <p>¡Hola! Esta es la ventana emergente.</p>
         </div>
+        <h4>CUAL ES TU INGREDIENTE FAVORITO</h4>
+        <select name="preferencias" id="preferencia"> ¿que prefieres?
+             <option disabled selected value="ARROZ">ARROZ</option>
+             <option value="PASTA">PASTA</option>
+             <option value="PAPA">PAPA</option>
+             <option value="VEGETALES">VEGETALES</option>
+        </select>
+        <button onclick="submit()">submit</button>
+        <p class="resultado"></p>
     
-        <script src="script.js"></script>             
+          <script>
+  function submit(){
+    const paragrafo= document.getElementsByClassName("resultado");
+    const seleccion = document.getElementById("preferencia").value;
+    paragrafo[0].innerHTML = "TU PREFERENCIA ES: "+ seleccion;
+    
+
+  }
+
+
+          </script>        
                         
 </body>
 </html>

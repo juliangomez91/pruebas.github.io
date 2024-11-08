@@ -41,5 +41,23 @@ function performSearch(query) {
     } 
   }
 
+  const nombre = prompt("¿Cuál es tu nombre?");
+
+  // Verificar si el usuario ingresó un nombre
+  if (nombre) {
+      // Crear un saludo personalizado
+      const mensaje = "¡Hola, " + nombre + "! Bienvenid@ a mi pagina.";
+      // Mostrar el saludo en la consola
+      console.log(mensaje);
+      // Insertar el saludo en el HTML
+      document.getElementById('saludo').innerText = mensaje;
+      const saludo = document.getElementById("saludo");
+     saludo.style.color="#9d6913";
+  } else {
+      // Mensaje si no se ingresó un nombre
+      document.getElementById('saludo').innerText = "¡Hola Bienvenid@ a mi pagina.";
+  }
+
+  
 
 

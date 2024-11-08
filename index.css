@@ -4,6 +4,7 @@ body{
 
 .titulo{
  display: flex;
+ justify-content: center;
 }
 
 .foto{
@@ -26,6 +27,11 @@ h1{
   left: 550px;
   border:solid #9d6913 5px;
   font-size: 45px;
+}
+#saludo{
+ color: white;
+ font-size: 25px;
+ margin-left: 3%;
 }
 h2{
   padding-left: 50px;
