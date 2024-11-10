@@ -16,7 +16,7 @@ margin-left: 50px;
 margin-top:25px ;
 }
 
-h1{
+.main{
   display: flex;
   justify-content: center;
   color:#feff53;
@@ -95,8 +95,40 @@ padding-left: 70px;
   margin-bottom: 200px;
 }
 
+.emergente{
+  position: fixed;
+  
+  left: 790px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+ border: solid #323254 3px;
+ width: 68%;
+ height: 300px;
+ z-index: 1000;
+ background-color:#b8b5ba;
+ border-radius: 20px ;
+ 
+}
+.close{
+  cursor: pointer;
+  float: right;
+  font-size: 30px;
+  color:black;
+  font-weight: bold;
+}
 
-
+#curso1{
+  width: 200px;
+  height: 220px;
+  border-radius: 10px;
+}
+#textoemergente{
+width: 550px;
+    margin-left: 450px;
+    color: white;
+    margin-top: -240px;
+    height: 200px;
+}
 
 
 .fotosPlatos{
@@ -137,7 +169,15 @@ padding-left: 70px;
   padding-left: 50px;
   
   }
-  
 
+  #parrafoemergente{
+    display: flex;
+   
+  
+  }
+  
+ .fototexto{
+  display: flex;
+}
  
 

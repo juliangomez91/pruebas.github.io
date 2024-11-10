@@ -58,6 +58,9 @@ function performSearch(query) {
       document.getElementById('saludo').innerText = "¡Hola Bienvenid@ a mi pagina.";
   }
 
-  
+  function closePopup(){
+     document.getElementById("emergente").style.display = "none"
+
+  }
 
 
