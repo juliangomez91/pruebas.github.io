@@ -105,7 +105,7 @@ padding-left: 70px;
  width: 68%;
  height: 300px;
  z-index: 1000;
- background-color:#b8b5ba;
+ background-color:#c6da52;
  border-radius: 20px ;
  
 }
@@ -119,8 +119,9 @@ padding-left: 70px;
 
 #curso1{
   width: 200px;
-  height: 220px;
+  height: 215px;
   border-radius: 10px;
+  border: solid black 2px;
 }
 #textoemergente{
 width: 550px;
@@ -179,5 +180,15 @@ width: 550px;
  .fototexto{
   display: flex;
 }
+
  
+#scroll{
+    overflow: hidden;
+    height: 200px;
+    overflow-y: scroll; /* Activa la barra de desplazamiento vertical */
+    scrollbar-color: #fc7d00 #feff53; /* Color de la barra y del fondo */
+    scrollbar-width: thin; /* Ancho de la barra 
+  
+  /* Estilo para navegadores basados en WebKit (Chrome, Safari) */
+ }
 
