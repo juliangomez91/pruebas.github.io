@@ -20,11 +20,17 @@
      
    <div class="encabezado">
      <div> <img class="foto" src="/fotos/Captura de pantalla 2023-09-06 160227.png" alt=""> </div>
+     
      <div class="search-container">
+      <form action="" id="search-form">
         <input type="text" id="search-input" placeholder="Buscar...">
-        <button id="search-button">Buscar</button>
-        <div id="results"></div>
+        <input class="search-button" type="submit" value="Buscar" name="" id="">
+      </form>
+      
+      <div id="results" class="result" > <span id="closeResults">&times;</span></div>
     </div>
+
+    
   <div class="links"> 
     
    <div> <a id="RECETAS" href="recetas.html">RECETAS</a> </div> <br><br>
@@ -38,7 +44,7 @@
 </div> 
 </div>
        <h2>MI PERFIL</h2> 
-   <div class="intro">  <p class="parrafo">
+   <div class="intro" id="intros">  <p class="parrafo">
          Cocinero y Pastelero Profesional de la Escuela Internacional de Gastronomía Mariano Moreno en Buenos Aires,  
          Argentina, con más de 12 años de experiencia dirigiendo la operación desde la parte administrativa como la parte operativa, 
          al igual cuento con una formación integral en buenas prácticas de manufactura. Mi formación y experiencia me han permitido adquirir  

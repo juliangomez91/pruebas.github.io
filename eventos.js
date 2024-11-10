@@ -14,3 +14,7 @@ function cerrarMama(){
 document.getElementById("ventana").style.display = "none"
 
 }
+
+
+
+

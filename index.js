@@ -1,4 +1,4 @@
-const data = ['manzana', 'banana', 'naranja', 'uva', 'fresa'];
+
 
 
 function redireccionar2(){
@@ -16,30 +16,7 @@ function redireccionar3 (){
 
 
 
-document.getElementById('search-button').addEventListener('click', function() {
-    const query = document.getElementById('search-input').value;
-    performSearch(query);
-});
 
-function performSearch(query) {
-    const results = data.filter(item => item.includes(query));
-    // Aquí puedes implementar la lógica de búsqueda
-    // Por ejemplo, filtrar una lista de elementos
-    const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = ''; // Limpiar resultados anteriores
-
-    // Simulación de búsqueda en un array de datos
-    
-    if (results.length > 0) {
-        results.forEach(result => {
-            const div = document.createElement('div');
-            div.textContent = result;
-            resultsDiv.appendChild(div);
-        });
-    } else {
-        resultsDiv.textContent = 'No se encontraron resultados.';
-    } 
-  }
 
   const nombre = prompt("¿Cuál es tu nombre?");
 
@@ -56,11 +33,45 @@ function performSearch(query) {
   } else {
       // Mensaje si no se ingresó un nombre
       document.getElementById('saludo').innerText = "¡Hola Bienvenid@ a mi pagina.";
+      saludo.style.color="#9d6913";
   }
 
   function closePopup(){
      document.getElementById("emergente").style.display = "none"
 
   }
+ 
+  document.getElementById('search-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evitar el envío del formulario
+
+    const query = document.getElementById('search-input').value.toLowerCase();
+    const content = document.getElementById('intros').innerText.toLowerCase();
+    const resultsDiv = document.getElementById('results');
+
+    // Limpiar resultados anteriores
+    resultsDiv.innerHTML = '';
+    resultsDiv.style.display = 'none';
+
+    if (query) {
+        const paragraphs = document.getElementById('intros').getElementsByTagName('p');
+        let found = false;
+
+        for (let i = 0; i < paragraphs.length; i++) {
+            const paragraphText = paragraphs[i].innerText.toLowerCase();
+            if (paragraphText.includes(query)) {
+                found = true;
+                const highlightedText = paragraphs[i].innerHTML.replace(new RegExp(query, 'gi'), (match) => `<span class="highlight">${match}</span>`);
+                resultsDiv.innerHTML += `<p>${highlightedText}</p>`;
+            }
+        }
+
+        if (found) {
+            resultsDiv.style.display = 'block';
+        } else {
+            resultsDiv.innerHTML = '<p>No se encontraron resultados.</p>';
+            resultsDiv.style.display = 'block';
+        }
+    }
+});
 
 

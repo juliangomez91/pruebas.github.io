@@ -192,3 +192,28 @@ width: 550px;
   /* Estilo para navegadores basados en WebKit (Chrome, Safari) */
  }
 
+ #results{
+ position: absolute;
+ z-index: 900;
+  left: 1200px;
+  top: 30%;
+  transform: translate(-50%, -50%);
+ border: solid #323254 3px;
+ width: 15%;
+ height: 150px;
+ background-color:#c6da52;
+ border-radius: 20px ;
+ overflow: hidden;
+ overflow-y: scroll;
+ scrollbar-color: #fc7d00 #feff53; /* Color de la barra y del fondo */
+ scrollbar-width: thin; 
+ display: none;
+ }
+ .search-button{
+  border-radius: 0 80px 0 80px;
+  width: 65px;
+  height: 30px;
+  background-color: #fc7d00;
+  color: black;
+}
+
