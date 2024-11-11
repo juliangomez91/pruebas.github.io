@@ -41,37 +41,65 @@ function redireccionar3 (){
 
   }
  
-  document.getElementById('search-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Evitar el envío del formulario
+ 
 
-    const query = document.getElementById('search-input').value.toLowerCase();
-    const content = document.getElementById('intros').innerText.toLowerCase();
-    const resultsDiv = document.getElementById('results');
 
-    // Limpiar resultados anteriores
-    resultsDiv.innerHTML = '';
-    resultsDiv.style.display = 'none';
+const busquedaInput = document.getElementById('search-input');
+const resultadosDiv = document.getElementById('results');
+const listaResultados = document.getElementById('listaResultados');
+buscarBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    realizarBusqueda();
+});
+const cerrarBtn = document.getElementById('cerrar');
 
-    if (query) {
-        const paragraphs = document.getElementById('intros').getElementsByTagName('p');
-        let found = false;
 
-        for (let i = 0; i < paragraphs.length; i++) {
-            const paragraphText = paragraphs[i].innerText.toLowerCase();
-            if (paragraphText.includes(query)) {
-                found = true;
-                const highlightedText = paragraphs[i].innerHTML.replace(new RegExp(query, 'gi'), (match) => `<span class="highlight">${match}</span>`);
-                resultsDiv.innerHTML += `<p>${highlightedText}</p>`;
-            }
-        }
-
-        if (found) {
-            resultsDiv.style.display = 'block';
-        } else {
-            resultsDiv.innerHTML = '<p>No se encontraron resultados.</p>';
-            resultsDiv.style.display = 'block';
-        }
+busquedaInput.addEventListener('input', function() {
+    if (busquedaInput.value.trim() === '') {
+        resultadosDiv.style.display = 'none'; // Ocultar el div de resultados si el input está vacío
+    } else {
+        realizarBusqueda();
     }
 });
+cerrarBtn.addEventListener('click', function() {
+    resultadosDiv.style.display = 'none'; // Ocultar el div de resultados
+    busquedaInput.value = ''; // Limpiar el campo de búsqueda
+});
 
+function realizarBusqueda() {
+    const query = busquedaInput.value.toLowerCase();
+    listaResultados.innerHTML = ''; // Limpiar resultados anteriores
+
+    if (query) {
+        resultadosDiv.style.display = 'block'; // Mostrar el div de resultados
+
+        // Buscar en el contenido
+        const contenido = document.getElementById('intros').innerText;
+        const lineas = contenido.split('\n');
+
+
+        lineas.forEach((linea) => {
+            const palabras = linea.split(' '); // Dividir la línea en palabras
+            const coincidencias = palabras.filter(palabra => palabra.toLowerCase().includes(query)); // Filtrar palabras que coinciden
+
+            if (coincidencias.length > 0) {
+                const li = document.createElement('li');
+                // Resaltar las palabras coincidentes
+                const lineaResaltada = palabras.map(palabra => {
+                    if (palabra.toLowerCase().includes(query)) {
+                        return `<span class="resaltado">${palabra}</span>`;
+                    }
+                    return palabra;
+                }).join(' ');
+
+                li.innerHTML = lineaResaltada; // Usar innerHTML para mostrar las palabras resaltadas
+                listaResultados.appendChild(li);
+            }
+        });
+    }
+}
+
+       
+        
+    
 
